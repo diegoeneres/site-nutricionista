@@ -34,11 +34,15 @@ contactForm?.addEventListener("submit", (event) => {
   const mensagem = formData.get("mensagem")?.toString().trim() || "";
 
   const whatsappText = encodeURIComponent(
-    `Oi, Priscilla! Meu nome é ${nome} e gostaria de saber mais sobre o seu atendimento nutricional.\n` +
+    `Olá, Priscilla! Cheguei aqui através do site e gostaria de mudar minha vida!`
+  );
+
+  const detailsText = encodeURIComponent(
+    `\n\nNome: ${nome}\n` +
     `WhatsApp: ${telefone}\n` +
     `Objetivo: ${objetivo}\n` +
     `Mensagem: ${mensagem || "Sem mensagem adicional."}`
   );
 
-  window.open(`https://wa.me/5500000000000?text=${whatsappText}`, "_blank", "noopener");
+  window.open(`https://wa.me/5538991248541?text=${whatsappText}${detailsText}`, "_blank", "noopener");
 });
